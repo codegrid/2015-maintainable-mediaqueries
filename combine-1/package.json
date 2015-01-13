@@ -1,0 +1,12 @@
+{
+  "name": "Sample1",
+  "version": "0.0.0",
+  "description": "this is sample1",
+  "main": "",
+  "author": "@geckotang",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-combine-mq": "~0.6.0"
+  },
+  "dependencies": {}
+}

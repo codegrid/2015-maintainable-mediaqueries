@@ -1,0 +1,36 @@
+.block {
+  width: 100px;
+}
+@media screen and (max-width: 320px) {
+  .block {
+    width: 50px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .block {
+    width: 150px;
+  }
+}
+
+.block2 {
+  background: tomato;
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .block2 {
+    background: limegreen;
+  }
+}
+
+.block3 {
+  border: 3px solid #ccc;
+}
+@media screen and (max-width: 320px) {
+  .block3 {
+    border-color: green;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 1000px) {
+  .block3 {
+    border-color: #000;
+  }
+}
