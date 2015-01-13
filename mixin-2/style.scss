@@ -1,0 +1,46 @@
+@mixin mq-screen($min-width, $max-width) {
+  @media screen and ( min-width: $min-width ) and ( max-width: $max-width ) {
+    @content;
+  }
+}
+@mixin mq-screen-min($min-width) {
+  @media screen and ( min-width: $min-width ) {
+    @content;
+  }
+}
+@mixin mq-screen-max($max-width) {
+  @media screen and ( max-width: $max-width ) {
+    @content;
+  }
+}
+
+.block {
+  //600px以上、1000px以下
+  @include mq-screen(600px, 1000px){
+    border: 3px solid #000;
+    padding: 10px;
+  }
+  //400px以上
+  @include mq-screen-min(400px){
+    background-color: tomato;
+  }
+  //400px以下
+  @include mq-screen-max(400px){
+    background-color: limegreen;
+  }
+  &::before {
+    display: block;
+    @include mq-screen-min(400px){
+      content: '400px以上です';
+    }
+    @include mq-screen-max(400px){
+      content: '400px以下です';
+    }
+  }
+  &::after {
+    display: block;
+    @include mq-screen(600px, 1000px){
+      content: 'そして600px以上、1000px以下です';
+    }
+  }
+}

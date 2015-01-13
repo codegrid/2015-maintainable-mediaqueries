@@ -1,0 +1,32 @@
+.block {
+  width: 900px;
+  margin: 0 auto;
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .block {
+    width: 100%;
+  }
+}
+@media (max-width: 599px) {
+  .block {
+    width: 100%;
+    min-width: 320px;
+  }
+}
+
+.block__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .block__item {
+    width: 50%;
+  }
+}
+@media (max-width: 599px) {
+  .block__item {
+    float: none;
+    width: 100%;
+  }
+}

@@ -1,0 +1,38 @@
+$mq-breakpoint-small: 600px;
+$mq-breakpoint-large: 900px;
+ 
+@mixin mq-middle {
+  @media (min-width: $mq-breakpoint-small) and (max-width: $mq-breakpoint-large - 1) {
+    @content;
+  }
+}
+ 
+@mixin mq-small {
+  @media (max-width: #{$mq-breakpoint-small - 1}) {
+    @content;
+  }
+}
+
+.block {
+  width: 900px;
+  margin: 0 auto;
+  @include mq-middle {
+    width: 100%;
+  }
+  @include mq-small {
+    width: 100%;
+    min-width: 320px;
+  }
+}
+.block__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  @include mq-middle {
+    width: 50%;
+  }
+  @include mq-small {
+    float: none;
+    width: 100%;
+  }
+}
